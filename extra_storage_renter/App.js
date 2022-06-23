@@ -16,7 +16,7 @@ import locationReducer from './store/reducers/location';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyAN2pjN6mbOp2sa6jwyABrWuPAQUV-pvlY",
+  apiKey: "PRIVATE_FIREBASE_API_KEY",
   authDomain: "extra-storage-1.firebaseapp.com",
   databaseURL: "https://extra-storage-1.firebaseio.com",
   projectId: "extra-storage-1",

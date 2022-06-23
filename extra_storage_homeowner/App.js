@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createStore, combineReducers,applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import * as firebase from "firebase";
 import { AppLoading } from 'expo';
@@ -15,20 +15,19 @@ import ordersReducer from './store/reducers/orders';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyAN2pjN6mbOp2sa6jwyABrWuPAQUV-pvlY",
-    authDomain: "extra-storage-1.firebaseapp.com",
-    databaseURL: "https://extra-storage-1.firebaseio.com",
-    projectId: "extra-storage-1",
-    storageBucket: "extra-storage-1.appspot.com",
-    messagingSenderId: "48221218129",
-    appId: "1:48221218129:web:889875d6d29c0c0478df70"
+  apiKey: "PRIVATE_FIREBASE_API_KEY",
+  authDomain: "extra-storage-1.firebaseapp.com",
+  databaseURL: "https://extra-storage-1.firebaseio.com",
+  projectId: "extra-storage-1",
+  storageBucket: "extra-storage-1.appspot.com",
+  messagingSenderId: "48221218129",
+  appId: "1:48221218129:web:889875d6d29c0c0478df70"
 };
 // Initialize Firebase
-try{
-firebase.initializeApp(firebaseConfig);
+try {
+  firebase.initializeApp(firebaseConfig);
 }
-catch(err)
-{
+catch (err) {
   console.log("");
 }
 //Deactivate warning message
@@ -49,7 +48,7 @@ const rootReducer = combineReducers({
   orders: ordersReducer
 });
 
-const store = createStore(rootReducer,applyMiddleware(ReduxThunk), composeWithDevTools ());
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk), composeWithDevTools());
 
 
 export default function App() {
